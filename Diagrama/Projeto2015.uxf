@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>3</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>135</x>
+      <y>300</y>
+      <w>108</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>classesprincipais::Hotel
+
+--
++List&lt;Hospede&gt; listaGeralHospedes
++List&lt;Contrato&gt; contratos
++List&lt;Opiniao&gt; opinioes
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>522</x>
+      <y>150</y>
+      <w>99</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>classesprincipais::Baba
+--
+-data: String
+-precoPorHora = 25.0: double
+-quantidadeHoras: int
+-totalDias = 1: int
+-horaInicio: String
+-horaFim: String
+-numHoraInicio: int
+-numHoraFim: int
+--
++Baba(String horaInicio, String horaFim): ctor
++Baba(int hInicial, int hFinal): ctor
++Baba(int hInicial, int hFinal, String data): ctor
++totalAPagar(): double
++getPrecoPorHora(): double
++setPrecoPorHora(double precoPorHora): void
++getQuantidadeHoras(): int
++setQuantidadeHoras(int quantidadeHoras): void
++getTotalDias(): int
++setTotalDias(int totalDias): void
++getHoraInicio(): String
++setHoraInicio(String horaInicio): void
++getHoraFim(): String
++setHoraFim(String horaFim): void
++getNumHoraInicio(): int
++setNumHoraInicio(int numHoraInicio): void
++getNumHoraFim(): int
++setNumHoraFim(int numHoraFim): void
++getData(): String
++setData(String data): void
++getReferencia(): String
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>291</x>
+      <y>249</y>
+      <w>54</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+classesprincipais::Servico
+--
+--
++totalAPagar(): double
++getReferencia(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>360</y>
+      <w>195</w>
+      <h>183</h>
+    </coordinates>
+    <panel_attributes>classesprincipais::Contrato
+--
+Hospede hospede
+-tipoTarifacao:Tarifacao 
+-listaServicos:List&lt;Servico&gt; 
+-numCartao:String 
+-totalQuartosAlugados:int 
+-totalServicosAdicionais:int
+-dataInicioContrato:String 
+-dataFimContrato:String 
+-Tarifacao:enum(NORMAL, ALTA, BAIXA)
+--
++Contrato( Hospede hospede, Tarifacao tipo, String numCartao, String dataInicio, String dataFim ): ctor
++Contrato( Hospede hospede, Tarifacao tipo, String numCartao, String dataInicio ): ctor
++getHospede(): Hospede
++setHospede(Hospede hospede):void 
++getTipoTarifacao():Tarifacao
++setTipoTarifacao(Tarifacao tipoTarifacao):void
++getListaServicos():List&lt;Servico&gt; 
++setListaServicos(List&lt;Servico&gt; listaServicos):void
++getNumCartao():String 
++setTotalQuartosAlugados(int totalQuartosAlugados):void 
++getTotalServicosAdicionais():int 
++setTotalServicosAdicionais(int totalServicosAdicionais):void  
++getDataInicioContrato():String 
++setDataInicioContrato(String dataInicioContrato):void 
++getDataFimContrato():String 
++setDataFimContrato(String dataFimContrato):void 
++adicionarServico( Servico serv ):void 
++getClienteInfo():String 
++removerServico(Servico serv):void 
++pesquisarServico( Servico serv ):Servico 
++pesquisarServico( String referencia ):Servico 
++toString():String 
++equals( Object obj ):boolean 
+ 
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>132</x>
+      <y>360</y>
+      <w>114</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>classesprincipais::Hospede
+--
+-nome: String
+-cpf: String
+-endereco: String
+-dataNascimento: String
+--
++Hospede(String nome, String cpf, String endereco): ctor
++Hospede(String nome, String cpf): ctor
++getNome(): String
++setNome(String nome): void
++getCpf(): String
++setCpf(String cpf): void
++getEndereco(): String
++setEndereco(String endereco): void
++getDataNascimento(): String
++setDataNascimento(String dataNascimento): void
++toString(): String
++hashCode(): int
++equals(Object obj): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>135</x>
+      <y>186</y>
+      <w>108</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>classesprincipais::Opiniao
+--
+-comentario: String
+-nota: int
+-data: String
+--
++Opiniao(String comentario, int nota, String data): ctor
++getComentario(): String
++getNota(): int
++getData(): String
++setComentario(String comentario): void
++setNota(int nota): void
++setData(String data): void
+-verificaComentario(String comentario): Exception
+-verificaNota(int nota): Exception
+-verificaData(String data): Exception
++hashCode(): int
++equals(Object obj): boolean
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>360</y>
+      <w>198</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>classesprincipais::Carro
+--
+-nome: String
+-placa: String
+-totalDiasAlugado: int
+-tipo: Tipo
+-comTanqueCheio: boolean
+-comSeguro: boolean
+-PRECO_TANQUE_CHEIO = 150.0: double
+-PRECO_SEGURO = 100.0: double
+--
++Carro(Tipo tp, int totalDiasAluguel, boolean comTanqueCheio, boolean comSeguro): ctor
++Carro(String placa, Tipo tp, int totalDiasAluguel, boolean comTanqueCheio, boolean comSeguro): ctor
++totalAPagar(): double
++getTotalDiasAlugado(): int
++setTotalDiasAlugado(int totalDiasAlugado): void
++getTipo(): Tipo
++setTipo(Tipo tipo): void
++isComTanqueCheio(): boolean
++setComTanqueCheio(boolean comTanqueCheio): void
++isComSeguro(): boolean
++setComSeguro(boolean comSeguro): void
++getNome(): String
++setNome(String nome): void
++getPreco(): String
++getPrecoTanqueCheio(): double
++setPrecoTanqueCheio(double precoTanqueCheio): void
++getPrecoSeguro(): double
++setPrecoSeguro(double precoSeguro): void
++getPlaca(): String
++setPlaca(String placa): void
++getReferencia(): String
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>399</x>
+      <y>237</y>
+      <w>111</w>
+      <h>93</h>
+    </coordinates>
+    <panel_attributes>classesprincipais::Refeicao
+--
+-data: String
+-totalRefeicoes: int
+-tipo: Tipo
+--
++Refeicao(Tipo refe, String nome, double preco): ctor
++totalAPagar(): double
++getData(): String
++setData(String data): void
++getTotalRefeicoes(): int
++setTotalRefeicoes(int totalRefeicoes): void
++getTipo(): Tipo
++setTipo(Tipo tipo): void
++getNome(): String
++getPreco(): String
++getReferencia(): String
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>399</x>
+      <y>150</y>
+      <w>111</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>classesprincipais::OutroServico
+--
+-descricao: String
+-preco: double
+--
++OutroServico(String descricao, String stringPreco): ctor
++getDescricao(): String
++setDescricao(String descricao): void
++getPreco(): double
++setPreco(double preco): void
++totalAPagar(): double
++getReferencia(): String
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>150</y>
+      <w>117</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>classesprincipais::Quarto
+--
+-referencia:String 
+-hospedeCliente:Hospede 
+-acompanhantes:List&lt;Hospede&gt; 
+-totalAlugado:int 
+-totalDisponivel:int 
+-totalDiasAlugado:int 
+-Tipo tipo
+-NUM_HOSPEDE_CLIENTE = 1:int 
+--
++Quarto( int totalDiasAluguel, Tipo tp ): ctor
++Quarto( Tipo tp ): ctor
++Quarto( String referencia, Tipo tipo, int totalDias ): ctor 
++Quarto( Tipo tp, String referencia ): ctor
++Tipo (PRESIDENCIAL,LUXO_SIMPLES,LUXO_DUPLO, LUXO_TRIPLO,EXECUTIVO_SIMPLES,EXECUTIVO_DUPLO,EXECUTIVO_TRIPLO):enum
++getCapacidade():int 
++setCapacidade(int quantidadeMaxima):void
++getPreco():double 
++setPreco(double preco):void
++totalAPagar():double
++getTotalAlugado():int 
++setTotalAlugado(int totalAlugado):void
++getTotalDisponivel():int 
++setTotalDisponivel(int totalDisponivel):void
++getTotalDiasAlugado():int 
++void setTotalDiasAlugado(int totalDiasAlugado):void
++retornaPreco( ):double
++getTipo():Tipo 
++setTipo(Tipo tipo):void
++getReferencia():String 
++setReferencia(String referencia):void
++getPreco():String 
++getCapacidade():String 
++getHospedeCliente():Hospede 
++setHospedeCliente(Hospede hospedeCliente):void
++getAcompanhantes():List&lt;Hospede&gt; 
++setAcompanhantes(List&lt;Hospede&gt; hospedesAcompanhantes):void
++adicionarAcompanhante( Hospede hospede ):void
++removerAcompanhante( Hospede hospede ):void 
++toString():String 
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>156</x>
+      <y>279</y>
+      <w>9</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>156</x>
+      <y>336</y>
+      <w>9</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>360</y>
+      <w>27</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>318</y>
+      <w>72</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;220.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>267</y>
+      <w>63</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>183</y>
+      <w>63</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;220.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>222</y>
+      <w>186</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;120.0;190.0;10.0;600.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>279</y>
+      <w>294</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0;960.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>279</y>
+      <w>216</w>
+      <h>87</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0;700.0;230.0;700.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>306</x>
+      <y>279</y>
+      <w>9</w>
+      <h>87</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;270.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

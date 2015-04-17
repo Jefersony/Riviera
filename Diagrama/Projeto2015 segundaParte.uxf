@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>3</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>453</x>
+      <y>135</y>
+      <w>177</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::Main
+--
++hotel = new Hotel(): Hotel
+-contentPane: JPanel
+-telaAddCliente = new AdicionarCliente(): AdicionarCliente
+-telaCadastrarHospede = new AdicionarHospede(): AdicionarHospede
+-telaCadastrarVariosHospedes = new AdicionarVariosHospedes(): AdicionarVariosHospedes
+-telaRmvHospede = new RemoverHospede(): RemoverHospede
+-telaPqsHospede = new PesquisarHospede(): PesquisarHospede
+-telaPqsrContrato = new PesquisarContrato(): PesquisarContrato
+-telaCriarContrato = new CriarContrato(): CriarContrato
+-telaVisualizarContrato = new VisualizarContrato(): VisualizarContrato
+-telaAlterarHospede = new AlterarHospede(): AlterarHospede
+-telaAlterarContrato = new AlterarContrato(): AlterarContrato
+-telaAdicionarServico = new AdicionarServico(): AdicionarServico
+-telaRemoverContrato = new RemoverContrato(): RemoverContrato
+-telaRemoverServico = new RemoverServico(): RemoverServico
+-telaPesquisarServicos = new PesquisarServicos(): PesquisarServicos
++areaTexto = new JTextArea(): JTextArea
+-statusDisplay: JTextPane
+-sair = new Sair(): Action
+-adicionarCliente = new AcaoAdicionarCliente(): Action
+-adicionarHospede = new AcaoCadastrarHospede(): Action
+-adicionarVariosHospedes = new AcaoCadastrarVariosHospedes(): Action
+-removerHospede = new AcaoRemoverHospede(): Action
+-pesquisarHospede = new AcaoPesquisarHospede(): Action
+-listarHospedes = new AcaoListarHospedes(): Action
+-criarContrato = new AcaoCriarContrato(): Action
+-listarContratos = new AcaoListarContratos(): Action
+-visualizarContrato = new AcaoVisualizarContrato(): Action
+-alterarContrato = new AcaoAlterarContrato(): Action
+-alterarHospede = new AcaoAlterarHospede(): Action
+-limparDisplay = new LimparDisplay(): Action
+-adicionarServico = new AcaoAdicionarServico(): Action
+-removerContrato = new AcaoRemoverContrato(): Action
+-removerServico = new AcaoRemoverServico(): Action
+-pesquisarContrato = new AcaoPesquisarContrato(): Action
+-pesquisarServicos = new AcaoPesquisarServicos(): Action
+--
++Main(): ctor
++main(String[] args): void
++getHotel(): Hotel
++getAddCliente(): AdicionarCliente
+-adicionarServicos(Contrato cntrt): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>741</x>
+      <y>135</y>
+      <w>75</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::PesquisarContrato
+--
+-cpf: String
+-numCartao: String
+-contentPanel = new JPanel(): JPanel
+-campoCartao: JTextField
+-campoCpf: JTextField
+--
++PesquisarContrato(): ctor
++main(String[] args): void
++limparEntradas(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>741</x>
+      <y>204</y>
+      <w>75</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::PesquisarHospede
+--
+-contentPanel = new JPanel(): JPanel
+-campoNome: JTextField
+-campoCpf: JTextField
+-nome: String
+-cpf: String
+--
++PesquisarHospede(): ctor
++main(String[] args): void
++getNome(): String
++getCpf(): String
++limparEntradas(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>741</x>
+      <y>282</y>
+      <w>75</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::PesquisarServicos
+--
+-hotel = Main.getHotel(): Hotel
+-hosp: Hospede
+-contrato: Contrato
+-display = Main.areaTexto: JTextArea
+-contentPanel = new JPanel(): JPanel
+-campoCPF: JTextField
+-comboBox: JComboBox
+--
++PesquisarServicos(): ctor
++main(String[] args): void
++limparEntradas(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>363</y>
+      <w>105</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::AlterarHospede
+--
+-indiceDoHospede: int
+-listaHospedes: List&lt;Hospede&gt;
+-contentPanel = new JPanel(): JPanel
+-campoNovoNome: JTextField
+-campoNovoCpf: JTextField
+-campoNovoEndereco: JTextField
+-campoNome: JTextField
+-campoCpf: JTextField
+-display: JTextField
+-campoNovaDataNascimento: JFormattedTextField
+--
++AlterarHospede(): ctor
++main(String[] args): void
++limparEntradas(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>396</y>
+      <w>75</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::VisualizarContrato
+--
+-contentPanel = new JPanel(): JPanel
+-campoNumCartao: JTextField
+-campoCPF: JTextField
+-displayContrato: JTextArea
+--
++VisualizarContrato(): ctor
++main(String[] args): void
++limparEntradaDados(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>549</x>
+      <y>396</y>
+      <w>75</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::RemoverHospede
+--
+-hotel = Main.getHotel(): Hotel
+-hospede: Hospede
+-contentPanel = new JPanel(): JPanel
+-campoNome: JTextField
+-campoCpf: JTextField
+--
++RemoverHospede(): ctor
++main(String[] args): void
++limparEntradas(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>396</y>
+      <w>75</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::RemoverContrato
+--
+-contentPanel = new JPanel(): JPanel
+-campoNumCartao: JTextField
+-campoCPF: JTextField
+-display: JTextArea
+-contrato: Contrato
+-hospede: Hospede
+--
++RemoverContrato(): ctor
++main(String[] args): void
++limparEntradas(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>381</x>
+      <y>396</y>
+      <w>81</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::RemoverServico
+--
+-contratoAtual: Contrato
+-servicos: List&lt;Servico&gt;
+-contentPanel = new JPanel(): JPanel
+-campoCartao: JTextField
+-campoCpf: JTextField
+-campoNServico: JTextField
+-display: JTextArea
+--
++RemoverServico(): ctor
++main(String[] args): void
++limparEntradas(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>285</x>
+      <y>396</y>
+      <w>90</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::AlterarContrato
+--
+-contratoAtual: Contrato
+-contentPanel = new JPanel(): JPanel
+-campoCartao: JTextField
+-campoCpf: JTextField
+-displayVerificar: JTextField
+-campoNovoCartao: JTextField
+-campoNovaDataInicio: JTextField
+-campoNovaDataFim: JTextField
+--
++AlterarContrato(): ctor
++main(String[] args): void
++limparEntradas(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>285</y>
+      <w>90</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::AdicionarVariosHospedes
+--
+-hotel = Main.getHotel(): Hotel
+-hospede: Hospede
+-totalAtual = 0: int
+-totalHospedes: int
+-contentPanel = new JPanel(): JPanel
+-campoNome: JTextField
+-campoCpf: JTextField
+-campoEndereco: JTextField
+-campoTotalHospedes: JTextField
+-displayStatusOperacao: JTextField
+-campoDataNascimento: JFormattedTextField
+--
++AdicionarVariosHospedes(): ctor
++main(String[] args): void
++limparEntradas(): void
++getCampoTotalHospedes(): JTextField
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>348</x>
+      <y>141</y>
+      <w>72</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::AdicionarCliente
+--
+-hotel = Main.getHotel(): Hotel
+-hospede: Hospede
+-contrato: Contrato
+-quarto: Servico
+-contentPane: JPanel
+-campoNome: JTextField
+-campoCpf: JTextField
+-campoEndereco: JTextField
+-campoCartao: JTextField
+-campoDataChegada: JTextField
+-campoDataSaida: JTextField
+-comboBoxTarifacao: JComboBox
+-comboBoxTipoQuarto: JComboBox
+-display: JLabel
+--
++AdicionarCliente(): ctor
++main(String[] args): void
++limparEntradas(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>228</x>
+      <y>285</y>
+      <w>96</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::AdicionarHospede
+--
+-hospede: Hospede
+-hotel = Main.hotel: Hotel
+-contentPanel = new JPanel(): JPanel
+-campoNome: JTextField
+-campoCpf: JTextField
+-campoEndereco: JTextField
+-campoDataNascimento: JFormattedTextField
+-display: JLabel
+--
++AdicionarHospede(): ctor
++main(String[] args): void
++limparEntradas(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>201</x>
+      <y>141</y>
+      <w>123</w>
+      <h>129</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica::AdicionarServico
+--
+-contratoAtual: Contrato
+-contentPanel = new JPanel(): JPanel
+-campoNumCartao: JTextField
+-campoCpf: JTextField
+-display: JTextArea
+-btnQuarto: JButton
+-btnCarro: JButton
+-btnRefeicao: JButton
+-btnBaba: JButton
+-btnOutro: JButton
+-lblEscolhaOTipo: JLabel
+-addQuarto = new AdicionarQuarto(): AdicionarQuarto
+-addCarro = new AdicionarCarro(): AdicionarCarro
+-addRefeicao = new AdicionarRefeicao(): AdicionarRefeicao
+-addBaba = new AdicionarBaba(): AdicionarBaba
+-novoServico = new NovoServico(): NovoServico
+--
++AdicionarServico(): ctor
++main(String[] args): void
++limparEntradas(): void
++disponibilizarBotoes(boolean boo): void
++adicionarServico(Servico serv): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>417</x>
+      <y>156</y>
+      <w>42</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>417</x>
+      <y>306</y>
+      <w>42</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>321</x>
+      <y>255</y>
+      <w>138</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;440.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>306</x>
+      <y>270</y>
+      <w>153</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;490.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>489</x>
+      <y>357</y>
+      <w>9</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>516</x>
+      <y>357</y>
+      <w>45</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>130.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>453</x>
+      <y>357</y>
+      <w>39</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>345</x>
+      <y>357</y>
+      <w>129</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;30.0;100.0;310.0;100.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>591</x>
+      <y>357</y>
+      <w>54</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>160.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>627</x>
+      <y>330</y>
+      <w>90</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>280.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>627</x>
+      <y>303</y>
+      <w>120</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>380.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>627</x>
+      <y>219</y>
+      <w>120</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>380.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>627</x>
+      <y>150</y>
+      <w>120</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>380.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>141</y>
+      <w>87</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica.servicos::AdicionarQuarto
+--
+-quarto: Servico
+-contentPanel = new JPanel(): JPanel
+-comboBoxTipoQuarto: JComboBox
+-display: JTextField
+-campoReferencia: JTextField
+--
++AdicionarQuarto(): ctor
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>282</y>
+      <w>87</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica.servicos::AdicionarBaba
+--
+-baba: Servico
+-contentPanel = new JPanel(): JPanel
+-display: JTextField
+-campoHoraI: JFormattedTextField
+-campoHoraF: JFormattedTextField
+--
++AdicionarBaba(): ctor
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>345</y>
+      <w>87</w>
+      <h>57</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica.servicos::AdicionarRefeicao
+--
+-refeicao: Servico
+-contentPanel = new JPanel(): JPanel
+-display: JTextField
+-campoDescricao: JTextField
+-campoPreco: JTextField
+-comboBoxRefeicao: JComboBox
+--
++AdicionarRefeicao(): ctor
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>414</y>
+      <w>87</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica.servicos::NovoServico
+--
+-novoServico: OutroServico
+-contentPanel = new JPanel(): JPanel
+-campoDescricao: JTextField
+-campoPreco: JTextField
+--
++NovoServico(): ctor
++main(String[] args): void
++limparEntradas(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>204</y>
+      <w>87</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>interfacegrafica.servicos::AdicionarCarro
+--
+-carro: Servico
+-contentPanel = new JPanel(): JPanel
+-display: JTextField
+-comboBoxTipoCarro: JComboBox
+-chckbxTanqueCheio: JCheckBox
+-chckbxSeguro: JCheckBox
+-comTanqueCheio = false: boolean
+-comSeguro = false: boolean
+-campoPlaca: JFormattedTextField
+--
++AdicionarCarro(): ctor
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>162</y>
+      <w>27</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>219</y>
+      <w>27</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>267</y>
+      <w>30</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;80.0;100.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>267</y>
+      <w>36</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;310.0;100.0;310.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>267</y>
+      <w>42</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;540.0;120.0;540.0;120.0;10.0</additional_attributes>
+  </element>
+</diagram>
